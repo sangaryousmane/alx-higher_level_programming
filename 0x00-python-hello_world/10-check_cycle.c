@@ -9,14 +9,14 @@
 int check_cycle(listint_t *list)
 {
 	int steps = 0, strength = 1;
-	listint *turtle, *hare;
-	
-	if (list == NULL || list.next == NULL)
+	listint_t *turtle, *hare;
+
+	if (list == NULL || list->next == NULL)
 	{
 		return (0);
 	}
 	turtle = list;
-	hare = list.next;
+	hare = list->next;
 
 	while (hare != NULL)
 	{
