@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-def fizzbuzz(number):
+def fizzbuzz():
     number = 1
     while number <= 100:
         if number % 3 == 0 and number % 5 == 0:
