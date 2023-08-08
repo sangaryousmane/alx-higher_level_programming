@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def islower(c):
     if c >= 'a' and c <= 'z':
-        return (TRUE)
+        return (True)
     else:
-        return (FALSE)
+        return (False)
