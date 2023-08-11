@@ -7,11 +7,11 @@ if __name__ == "__main__":
     i = 0
 
     if count == 0:
-        print("0 argument")
+        print("0 argument.")
     elif count == 1:
-        print("1 argument")
+        print("1 argument:")
     else:
-        print("{} arguments".format(count))
+        print("{} arguments:".format(count))
 
     while i in range(count):
         print("{}: {}".format(i + 1, args[i]))
