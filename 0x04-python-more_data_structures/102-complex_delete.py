@@ -7,4 +7,4 @@ def complex_delete(a_dictionary, value):
             to_del.add(key)
     for key in to_del:
         del a_dictionary[key]
-    return {key: value for key, value in a_dictionary.items() if key not in to_del}
+    return a_dictionary
