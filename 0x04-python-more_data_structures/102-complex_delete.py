@@ -3,9 +3,9 @@ def complex_delete(a_dictionary, value):
     """ Delete a key with specific value in a dictionary """
 
     to_del = set()
-    for key in a_dictionary:
-        if a_dictionary[key] == value:
-            to_del.add(key)
-    for key in to_del:
-        del a_dictionary[key]
-    return {k: v for k, v in a_dictionary.items() if k not in to_del}
+    for k in a_dictionary:
+        if a_dictionary[k] == value:
+            to_del.add(k)
+    for k in to_del:
+        del a_dictionary[k]
+    return {k: value for k, value in a_dictionary.items() if k not in to_del}
