@@ -1,42 +1,42 @@
 #include "lists.h"
 
 /**
- * is_palindrome - checks for palindrome in a linked list
- * @head: head of the structure that mimics a linked list
- * Return: 0 if not palindrome, otherwise 1
+ * is_palindrome - checks if a linked list is a palindrome
+ * @head: double pointer to the linked list
+ *
+ * Return: 1 if it is, 0 if not
  */
 int is_palindrome(listint_t **head)
 {
+	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
+	listint_t *prev = NULL, *current = *head, *next = NULL;
+
 	if (*head == NULL || (*head)->next == NULL)
-	{
 		return (1);
-	}
-	listint_t *slow = *head, *fast = *head;
-	listint_t *prev = NULL, *temp = slow->next, *next;
 
-	while (fast->next != NULL && fast->next->next != NULL)
+	for (; fast; fast = fast->next->next)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
-	}
-
-	while (temp != NULL)
-	{
-		next = temp->next;
-		temp->next = prev;
-		prev = temp;
-		temp = next;
-	}
-	listint_t *p1 = *head, *p2 = prev;
-
-	while (p2 != NULL)
-	{
-		if (p1->n != p2->n)
+		if (!fast->next)
 		{
-			return (0);
+			dup = slow->next->next;
+			break;
 		}
-		p1 = p1->next;
-		p2 = p2->next;
+		slow = slow->next;
 	}
-	return (1);
+
+	for (; current != dup; current = next)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+	}
+
+	if (fast)
+		dup = dup->next;
+	for (; dup && temp; dup = dup->next, temp = temp->next)
+	{
+		if (temp->n != dup->n)
+			return (0);
+	}
+	return (!dup);
 }
