@@ -52,7 +52,7 @@ void print_python_bytes(PyObject *p)
 	printf("  trying string: %s\n", ptr);
 	limit = (size >= 10) ? 10 : size + 1;
 	printf("  first %ld bytes:", limit);
-	for (ptr2 = ptr; ptr2 < string + limit; ptr2++)
+	for (ptr2 = ptr; ptr2 < ptr + limit; ptr2++)
 		printf(" %02x", (unsigned char)*ptr2);
 	printf("\n");
 }
