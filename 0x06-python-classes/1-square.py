@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Defines a private class instance and a constructor"""
+
 
 class Square:
     """This class implements an empty Square that defines a square"""
