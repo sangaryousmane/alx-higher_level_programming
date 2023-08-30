@@ -7,7 +7,7 @@ class Square:
 
     def __str__(self):
         """ print the square """
-        return self.pos_print()[:-1]
+        return self.position_print()[:-1]
 
     def __init__(self, size=0, position=(0, 0)):
         """ initialize the square with this
@@ -52,7 +52,7 @@ class Square:
         """ the area of square"""
         return self.__size * self.__size
 
-    def pos_print(self):
+    def position_print(self):
         """returns the printed square with position"""
         post = ""
         if not self.size:
@@ -69,4 +69,4 @@ class Square:
 
     def my_print(self):
         """print square."""
-        print(self.pos_print(), end="")
+        print(self.position_print(), end="")
