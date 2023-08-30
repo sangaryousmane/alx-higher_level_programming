@@ -29,3 +29,11 @@ class Square:
     def size(self, value):
         """ the mutator that set a size for us"""
         self.__size = value
+
+    def my_print(self):
+        """ Prints a square with # for us"""
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                print("#" * self.__size)
