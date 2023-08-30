@@ -37,7 +37,7 @@ class Node:
         """ the mutator method for the next node"""
         if (value is not None and not isinstance(value, Node)):
             raise TypeError("next_node must be a Node object")
-        self._next_node = value
+        self.__next_node = value
 
 
 """This class mimicks a linked list"""
@@ -76,6 +76,6 @@ class SinglyLinkedList:
         while temp.next_node and temp.next_node.data < value:
             temp = temp.next_node
 
-        if new_node.next_node:
+        if temp.next_node:
             new_node.next_node = temp.next_node
         temp.next_node = new_node
