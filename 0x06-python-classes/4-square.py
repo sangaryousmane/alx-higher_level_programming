@@ -26,6 +26,6 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
         """ the mutator that set a size for us"""
         self.__size = size
