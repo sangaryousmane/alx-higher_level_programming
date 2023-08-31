@@ -5,7 +5,7 @@
 class Square:
     """This class implements a  Square that defines a square"""
 
-    def __init__(self, size=0, position=(0, 0)):
+    def __init__(self, size=0):
         """this is the class constructor
         Args:
          size: the input size of the square.
@@ -14,11 +14,7 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        if type(position) != tuple(int, int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-
         self.__size = size
-        self.__position = position
 
     def area(self):
         """ Calculate the area of the square"""
@@ -45,15 +41,3 @@ class Square:
         else:
             for i in range(self.__size):
                 print("#" * self.__size)
-
-    @property
-    def position(self):
-        """ Retrive the value of the private position"""
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        """ sets the value of the position variable"""
-        if type(position) != tuple(int, int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
