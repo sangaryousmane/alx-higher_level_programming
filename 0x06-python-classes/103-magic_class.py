@@ -8,10 +8,10 @@ class MagicClass:
 
     def __init__(self, radius=0):
         """ magic's class constructor """
-        self.radius = 0
+        self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
-        self.radius = radius
+        self.__radius = radius
 
     def area(self):
         """finds the area"""
