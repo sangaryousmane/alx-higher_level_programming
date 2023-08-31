@@ -5,7 +5,7 @@
 class Square:
     """This class implements a  Square that defines a square"""
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """this is the class constructor
         Args:
          size: the input size of the square.
@@ -14,7 +14,11 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.size = size
+        self.position = position
+
+    def __str__(self):
+        self.my_print()
 
     def area(self):
         """ Calculate the area of the square"""
@@ -36,8 +40,15 @@ class Square:
 
     def my_print(self):
         """ Prints a square with # for us"""
-        if self.__size == 0:
-            print()
-        else:
-            for i in range(self.__size):
-                print("#" * self.__size)
+        post = ""
+        if self.size == 0:
+            return "\n"
+        for i in range(self.position[1]):
+            post += "\n"
+        for j in range(self.size):
+            for k in range(self.position[0]):
+                post += " "
+            for w in range(self.size):
+                post += "#"
+            post += "\n"
+        print(f'{post}', end='')
