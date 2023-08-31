@@ -39,7 +39,7 @@ class Square:
         self.__size = value
 
     def my_print(self):
-        """ Prints a square with # for us"""
+        """Prints a square with #"""
         post = ""
         if self.size == 0:
             return "\n"
