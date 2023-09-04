@@ -11,6 +11,8 @@ class Rectangle:
     Methods:
     None
     """
+    pass
+
     def __init__(self, width=0, height=0):
         """Initializing this rectangle class
         Args:
