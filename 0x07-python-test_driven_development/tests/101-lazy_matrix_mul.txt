@@ -1,0 +1,41 @@
+Test case for the lazy_matrix_mul function
+======================================
+
+the lazy_matrix_mul function multiplies 2 matrices:
+
+USAGE
+=======
+
+Import module into the test file
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Two matrix of same dimension
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+[[19, 22], [43, 50]]
+
+The case when m_a contains a string(non-integers)
+>>> lazy_matrix_mul([[1, 2], [3, '4']], [[5, 6], [7, 5]])
+Traceback (most recent call last):
+        ...
+TypeError: m_a should contain only integers or floats
+
+Case when  m_a is empty
+>>> lazy_matrix_mul([[]], [[1, 2], [3, 2]])
+Traceback (most recent call last):
+        ...
+ValueError: m_a can't be empty
+
+Case when  m_b is empty
+>>> lazy_matrix_mul([[1, 2], [3, 2]], [[]])
+Traceback (most recent call last):
+         ...
+ValueError: m_b can't be empty
+
+When the m_b matrix contains a string
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, '4']])
+Traceback (most recent call last):
+        ...
+TypeError: m_b should contain only integers or floats

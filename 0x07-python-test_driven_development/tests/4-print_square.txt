@@ -1,0 +1,54 @@
+Edge cases for the print_square function
+======================================
+
+The print_square function prints a square with the character #.
+
+USAGE
+=======
+
+Dynamically imports the function's module
+>>> print_square = __import__('4-print_square').print_square
+
+print square given that size = 4
+>>> print_square(4)
+####
+####
+####
+####
+
+print square given that size = 10
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+print only one time when size = 1
+>>> print_square(1)
+#
+
+print square given positive float
+>>> print_square(1.0)
+#
+
+print an empty space given that size = 0
+>>> print_square(0)
+
+
+TypeError when the size is not an integer
+>>> print_square("4")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+ValueError when the size is less than 0
+>>> print_square(-1)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0

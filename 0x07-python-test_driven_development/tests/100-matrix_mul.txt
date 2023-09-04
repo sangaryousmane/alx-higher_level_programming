@@ -1,0 +1,41 @@
+Test case for the matrix_mul function
+======================================
+
+the matrix_mul function multiplies 2 matrices:
+
+USAGE
+=======
+
+Import module into the test file
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Two matrix of same dimension
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+>>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+[[19, 22], [43, 50]]
+
+Case when  m_a is empty
+>>> matrix_mul([[]], [[1, 2], [3, 2]])
+Traceback (most recent call last):
+        ...
+ValueError: m_a can't be empty
+
+Case when  m_b is empty
+>>> matrix_mul([[1, 2], [3, 2]], [[]])
+Traceback (most recent call last):
+         ...
+ValueError: m_b can't be empty
+
+The case when m_a contains a string(non-integers)
+>>> matrix_mul([[1, 2], [3, '4']], [[5, 6], [7, 5]])
+Traceback (most recent call last):
+        ...
+TypeError: m_a should contain only integers or floats
+
+When the m_b matrix contains a string
+>>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, '4']])
+Traceback (most recent call last):
+        ...
+TypeError: m_b should contain only integers or floats
