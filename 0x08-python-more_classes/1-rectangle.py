@@ -42,11 +42,11 @@ class Rectangle:
         """ getter for height """
         return self.__heigth
 
-    @heigth.setter
-    def heigth(self, value):
+    @height.setter
+    def height(self, value):
         """ The heigth's mutator """
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__heigth = value
+        self.__height = value
