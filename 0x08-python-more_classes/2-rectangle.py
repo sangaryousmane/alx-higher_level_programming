@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" The Rectangle's top-level doc """
 
 
 class Rectangle:
