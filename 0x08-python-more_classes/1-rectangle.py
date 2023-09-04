@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Defines a Rectangle class"""
 
+
 class Rectangle:
     """
     Attributes:
@@ -8,11 +9,11 @@ class Rectangle:
     - height (int): The height of the rectangle.
 
     Methods:
-    - __init__(self, width, height): Initializes a new instance of the Rectangle class.
+    - __init__(self, width, height): Initializes a new constructor.
     - width(self): Returns the width of the rectangle.
-    - width(self, value): Sets the width of the rectangle to the specified value.
+    - width(self, value): Sets the width of the rectangle
     - height(self): Returns the height of the rectangle.
-    - height(self, value): Sets the height of the rectangle to the specified value.
+    - height(self, value): Sets the height of the rectangle
     """
 
     def __init__(self, width=0, height=0):
@@ -35,7 +36,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """ sets the width's value """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -49,7 +50,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """ The heigth's mutator """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
