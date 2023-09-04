@@ -1,0 +1,46 @@
+Edge cases for the add_integer function
+======================================
+
+The 0-add_integer function contains two arguments and their sum is return
+
+USAGE
+=======
+
+Imports the function's module
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Add two positive integers where a = 2 and b = 3
+>>> add_integer(2, 3)
+5
+
+Add a positive float and int where a = 2 and b = 3.5
+>>> add_integer(2, 3.5)
+5
+
+Add two floats where a = 2.5 and b = 3.5
+>>> add_integer(2.5, 3.5)
+5
+
+TypeError when the first argument(a) is string
+>>> add_integer("2", 3)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+TypeError when the second element is a string
+>>> add_integer(2, "3")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+Adding two negative numbers where a = -3 and b = -1
+>>> add_integer(-3, -1)
+-4
+
+Adding a negative and a positive number of same number (a = -3, b = 3)
+>>> add_integer(-3, 3)
+0
+
+Keeping the value of b constant(b = 98) and passing only a = 90
+>>> add_integer(90, 98)
+188

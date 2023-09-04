@@ -1,0 +1,31 @@
+Edge cases for the 3-say_my_name function
+======================================
+
+The 3-say_my_name  function prints My name is <first name> <last name> 
+where first_name and last_name is the user names
+
+USAGE
+=======
+
+Dynamically imports the function's module
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Print full name(first_name and last_name)
+>>> say_my_name("Ousmane", "Sangary")
+My name is Ousmane Sangary
+
+TypeError when the first argument(first_name) is not a string
+>>> say_my_name(4, "Sangary")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+TypeError when the second element(last_name) is not a string
+>>> say_my_name("Ousmane", 100)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+TypeError when the first name(first_name) is given but last_name is empty
+>>> say_my_name("Ousmane", "")
+My name is Ousmane 
