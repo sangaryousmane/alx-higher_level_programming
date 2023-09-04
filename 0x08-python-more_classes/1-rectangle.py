@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-""" Mimics a Rectangle """
 
 
 class Rectangle:
@@ -13,15 +12,14 @@ class Rectangle:
     None
     """
     def __init__(self, width=0, height=0):
-        """ the class constructor """
-        if type(width) != int:
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        if type(heigth) != int:
-            raise TypeError("heigth must be an integer")
-        if heigth < 0:
-            raise ValueError("heigth must be >= 0")
+        """Initializing this rectangle class
+        Args:
+            width: represents the width of the rectangle
+            height: represents the height of the rectangle
+        Raises:
+            TypeError: if size is not of type int
+            ValueError: if size is negative
+        """
         self.width = width
         self.height = height
 
@@ -49,6 +47,6 @@ class Rectangle:
         """ The heigth's mutator """
         if type(value) != int:
             raise TypeError("height must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
         self.__heigth = value
