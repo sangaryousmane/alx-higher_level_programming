@@ -2,16 +2,18 @@
 
 
 class Rectangle:
-    """"
-    This class represents a rectangle shape.
-
+    """
     Attributes:
-    None
+    - width (int): The width of the rectangle.
+    - height (int): The height of the rectangle.
 
     Methods:
-    None
+    - __init__(self, width, height): Initializes a new instance of the Rectangle class.
+    - width(self): Returns the width of the rectangle.
+    - width(self, value): Sets the width of the rectangle to the specified value.
+    - height(self): Returns the height of the rectangle.
+    - height(self, value): Sets the height of the rectangle to the specified value.
     """
-    pass
 
     def __init__(self, width=0, height=0):
         """Initializing this rectangle class
@@ -22,8 +24,8 @@ class Rectangle:
             TypeError: if size is not of type int
             ValueError: if size is negative
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
