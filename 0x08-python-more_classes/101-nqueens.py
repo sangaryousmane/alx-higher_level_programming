@@ -21,7 +21,7 @@ class Nqueens:
 
     def nqueen_copy(self, board):
         """Return a deepcopy of a chessboard."""
-        if type(board) !=list:
+        if type(board) != list:
             return list(map(self.nqueen_copy, board))
         return (board)
 
