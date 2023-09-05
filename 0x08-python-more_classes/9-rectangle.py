@@ -133,4 +133,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """ a class method that returns new Rectangle instance with """
-        return cls.width == cls.heigth == cls.size
+        return Rectangle(size, size)
