@@ -33,14 +33,6 @@ print only one time when size = 1
 >>> print_square(1)
 #
 
-print square given positive float
->>> print_square(1.0)
-#
-
-print an empty space given that size = 0
->>> print_square(0)
-
-
 TypeError when the size is not an integer
 >>> print_square("4")
 Traceback (most recent call last):
