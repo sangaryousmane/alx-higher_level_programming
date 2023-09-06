@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def magic_string():
+    """ Print by iteration"""
     if not hasattr(magic_string, 'count'):
         magic_string.count = 0
     magic_string.count += 1
