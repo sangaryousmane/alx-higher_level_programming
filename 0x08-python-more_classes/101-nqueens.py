@@ -85,20 +85,19 @@ class Nqueens:
 
 
 if __name__ == "__main__":
-    from sys import exit, argv
-
-    if len(argv) != 2:
+    import sys
+    if len(sys.argv) != 2:
         print("Usage: nqueens N")
-        exit(1)
-    if argv[1].isdigit() is False:
+        sys.exit(1)
+    if sys.argv[1].isdigit() is False:
         print("N must be a number")
-        exit(1)
-    if int(argv[1]) < 4:
+        sys.exit(1)
+    if int(sys.argv[1]) < 4:
         print("N must be at least 4")
-        exit(1)
+        sys.exit(1)
 
     nqueen = Nqueens()
-    board = nqueen.init_board(int(argv[1]))
+    board = nqueen.init_board(int(sys.argv[1]))
     result = nqueen.solve_recur(board, 0, 0, [])
     for sol in result:
         print(sol)
