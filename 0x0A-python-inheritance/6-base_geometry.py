@@ -4,7 +4,6 @@
 
 class BaseGeometry:
     """ Serve as super class for future child classes"""
-    
 
     def area(self):
         """ Raise an exception"""
