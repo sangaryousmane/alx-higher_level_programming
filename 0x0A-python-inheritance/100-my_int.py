@@ -5,12 +5,14 @@ and not equal methods"""
 
 class MyInt(int):
     """
-    A subclass of the built-in int class that inverts the == and != operators.
+    A subclass of the built-in int class that inverts
+    the == and != operators.
     """
 
     def __eq__(self, other):
         """
-        Overrides the == operator to return the opposite of the built-in behavior.
+        Overrides the == operator to return the opposite
+        of the built-in behavior.
 
         Args:
             other: An object to compare against.
@@ -22,7 +24,8 @@ class MyInt(int):
 
     def __ne__(self, other):
         """
-        Overrides the != operator to return the opposite of the built-in behavior.
+        Overrides the != operator to return the opposite of
+        the built-in behavior.
 
         Args:
             other: An object to compare against.
@@ -31,4 +34,3 @@ class MyInt(int):
             bool: True if the objects are equal; otherwise, False.
         """
         return not super().__ne__(other)
-
