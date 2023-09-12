@@ -16,7 +16,7 @@ class Rectangle(BaseGeometry):
         """ Implements the area function given the height and
         the width
         """
-        return self.__height * self__width
+        return self.__height * self.__width
 
     def __str__(self):
         """ the to string method for informally printing
