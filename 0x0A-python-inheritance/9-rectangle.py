@@ -22,4 +22,6 @@ class Rectangle(BaseGeometry):
         """ the to string method for informally printing
         strings
         """
-        return f'{self.__width / self.__height}'
+        rect = "[" + str(self.__class__.__name__) + "] "
+        rect += str(self.__width) + "/" + str(self.__height)
+        return rect
