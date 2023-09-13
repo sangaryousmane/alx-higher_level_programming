@@ -12,7 +12,7 @@ class Student:
 
     def def to_json(self):
         """ converts from class to json"""
-        obj_dict = obj.__dict__
+        obj_dict = self.__dict__
 
         for key, value in obj_dict.items():
             if isinstance(value, (list, dict, str, int, bool)):
