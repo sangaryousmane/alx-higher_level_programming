@@ -8,4 +8,3 @@ def load_from_json_file(filename):
     with open(filename, "w") as f:
         data = json.load(f)
     return data
-
