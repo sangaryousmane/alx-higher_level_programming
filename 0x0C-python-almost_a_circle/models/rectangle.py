@@ -13,7 +13,6 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-
     @property
     def width(self):
         """ an accesor for the width"""
@@ -73,3 +72,19 @@ class Rectangle(Base):
     def area(self):
         """ calculates the area of the rectangle"""
         return self.__width * self.__height
+
+    def display(self):
+        """ prints in stdout the Rectangle instance with the character #"""
+        for i in range(self.y):
+            print("")
+        for row in range(self.__height):
+            for j in range(self.x):
+                print(" ", end="")
+            for col in range(self.__width):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """ format the class content"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
+                {self.__width} / {self.__height}"
