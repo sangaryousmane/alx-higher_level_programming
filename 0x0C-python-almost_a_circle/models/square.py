@@ -37,7 +37,7 @@ class Square(Rectangle):
         """ the update version of the square"""
         def set_attribute(attr, value):
             """ a helper inner function to minimize code"""
-            if value is not None and type(value) == int :
+            if value is not None and type(value) == int:
                 setattr(self, attr, value)
             else:
                 raise TypeError("id must be an integer")
@@ -65,3 +65,7 @@ class Square(Rectangle):
                     set_attribute('x', value)
                 if key == "y":
                     set_attribute('y', value)
+
+    def to_dictionary(self):
+        """ the dictionary representation of this class"""
+        return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
