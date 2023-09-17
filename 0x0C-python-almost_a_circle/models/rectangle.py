@@ -56,7 +56,7 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    def y(self, value):
+    def y(self):
         """ an accesor for the y field"""
         return self.__y
 
@@ -88,3 +88,16 @@ class Rectangle(Base):
         """ format the class content"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
                 {self.__width} / {self.__height}"
+
+    def update(self, *args):
+        """ add variable number of no-keywords argument"""
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.__width = args[1]
+        if len(args) > 2:
+            self.__height = args[2]
+        if len(args) > 3:
+            self.__x = args[3]
+        if len(args) > 4:
+            self.__y = args[4]
