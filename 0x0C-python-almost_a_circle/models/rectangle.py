@@ -86,8 +86,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """ format the class content"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
-                {self.__width} / {self.__height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
+               f"{self.__width}/{self.__height}"
 
     def update(self, *args):
         """ add variable number of no-keywords argument"""
