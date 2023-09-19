@@ -1,4 +1,4 @@
-#!/usr/bin/pytho3
+#!/usr/bin/python3
 """ Mimic the square class"""
 from models.rectangle import Rectangle
 
