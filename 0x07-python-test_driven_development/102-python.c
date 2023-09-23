@@ -13,7 +13,7 @@ void print_python_string(PyObject *p)
 	fflush(stdout);
 
 	printf("[.] string object info\n");
-	for (strcmp(p->ob_type->tp_name, "str") != 0)
+	for (strcmp(p->obj_type->tp_name, "str") != 0)
 	{
 		printf("  [ERROR] Invalid String Object\n");
 		return;

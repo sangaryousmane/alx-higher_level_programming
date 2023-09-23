@@ -41,6 +41,27 @@ Adding a negative and a positive number of same number (a = -3, b = 3)
 >>> add_integer(-3, 3)
 0
 
-Keeping the value of b constant(b = 98) and passing only a = 90
->>> add_integer(90, 98)
-188
+Adding a positive and a negative integer
+>>> add_integer(10, -2)
+8
+
+Only a number for a
+>>> add_integer(3)
+101
+
+
+>>> add_integer(float('inf'), float('-inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+
+>>> add_integer(0, float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
