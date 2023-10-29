@@ -27,5 +27,5 @@ jobs:
         cd 0x07-python-test_driven_development/tests
          python -m unittest discover -p '*_test.py'
         cd 0x0C-python-almost_a_circle/tests
-         python -m unittest discover -p '*_test.py'
+         python -m unittest discover -p '*.py'
         
