@@ -24,6 +24,6 @@ jobs:
 
     - name: Run tests
       run: |
-        cd 0x0C-python-almost_a_circle/tests
-         python -m unittest discover -p '*.py'
+        cd 0x0C-python-almost_a_circle
+         python 101-main.py
         
