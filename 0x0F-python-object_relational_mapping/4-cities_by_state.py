@@ -10,7 +10,9 @@ if __name__ == "__main__":
         db=sys.argv[3], host='localhost', port=3306)
 
     result = conn.cursor()
-    result.execute("SELECT *FROM cities ORDER BY id ASC")
+    result.execute("""SELECT c.id, c.name, s.name FROM states s, cities c
+            WHERE c.state_id = s.id ORDER BY c.id ASC""")
+
     query_rows = result.fetchall()
     
     for row in query_rows:
