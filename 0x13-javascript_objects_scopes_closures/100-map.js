@@ -2,6 +2,6 @@
 const list = require('./100-data');
 
 console.log(list);
-list.map((v) => (v * list[v]));
-
+list.map((v, index) => (v * index));
+console.log(list)
 module.exports = list;
