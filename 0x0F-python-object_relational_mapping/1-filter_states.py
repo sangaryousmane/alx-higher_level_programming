@@ -10,7 +10,7 @@ if __name__ == "__main__":
     conn = obj.connect(user=sys.argv[1], passwd=sys.argv[2],
                        db=sys.argv[3], port=3306)
     result = conn.cursor()
-    result.execute("""SELECT *FROM states s WHERE s.name LIKE 'N%'
+    result.execute("""SELECT *FROM states AS s WHERE s.name LIKE 'N%'
             ORDER BY s.id ASC;""")
     query_rows = result.fetchall()
 
