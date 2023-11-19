@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-""" Write a script that takes in an argument and displays all values
-in the states table of hbtn_0e_0_usa where name matches the argument. """
+""" Connect and fetch all data from the db
+with state starting in upper N"""
 
-import sys
 import MySQLdb as obj
-
+import sys
 
 if __name__ == "__main__":
-    conn = obj.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], host='localhost', port=3306)
 
+    conn = obj.connect(user=sys.argv[1], passwd=sys.argv[2],
+                       db=sys.argv[3], port=3306)
     result = conn.cursor()
-    result.execute("SELECT *FROM states WHERE name LIKE 'N%' ORDER BY id ASC".format(sys.argv[4]))
+    result.execute("""SELECT *FROM states AS s WHERE s.name LIKE '{}';
+            """.format(sys.argv[4]))
     query_rows = result.fetchall()
 
     for row in query_rows:
