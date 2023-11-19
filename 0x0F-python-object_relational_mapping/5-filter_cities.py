@@ -10,8 +10,8 @@ if __name__ == "__main__":
     conn = obj.connect(user=sys.argv[1], passwd=sys.argv[2],
                        db=sys.argv[3], port=3306)
     result = conn.cursor()
-    sql_statement = (""" SELECT c.name FROM states AS s, cities c WHERE
-            %s = %s AND c.state_id = s.id ORDER BY c.id ASC""", (sys.argv[4], sys.argv[5], ))
+    sql_statement = (""" SELECT c.id, c.name, s.name FROM cities c, states s WHERE
+            s.name = %s AND c.state_id = s.id """, (sys.argv[4],))
 
     result = result.execute(sql_statement)
     query_rows = result.fetchall()
