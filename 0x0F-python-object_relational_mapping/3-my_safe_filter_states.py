@@ -9,8 +9,8 @@ if __name__ == "__main__":
     conn = obj.connect(user=sys.argv[1], passwd=sys.argv[2],
                        db=sys.argv[3], port=3306)
     result = conn.cursor()
-    result.execute("""SELECT *FROM states AS s WHERE
-            s.name = %s""", (sys.argv[4]),)
+    result.execute("""SELECT *FROM state  WHERE
+            name = %s""", (sys.argv[4]),)
     query_rows = result.fetchall()
 
     for row in query_rows:
