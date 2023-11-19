@@ -11,7 +11,7 @@ if __name__ == "__main__":
                        db=sys.argv[3], port=3306)
     result = conn.cursor()
     sql_statement = (""" SELECT c.name FROM states AS s, cities c WHERE
-            {} = %s AND c.state_id = s.id ORDER BY c.id ASC""", (sys.argv[4],))
+            %s = %s AND c.state_id = s.id ORDER BY c.id ASC""", (sys.argv[4], sys.argv[5], ))
 
     result = result.execute(sql_statement)
     query_rows = result.fetchall()
