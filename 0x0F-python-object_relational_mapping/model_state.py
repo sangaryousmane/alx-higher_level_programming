@@ -12,7 +12,6 @@ Base = declarative_base()
 
 class State(Base):
     """ The state model inherits the base model
-        
         Attributes:
           id(int)
           name(string)
