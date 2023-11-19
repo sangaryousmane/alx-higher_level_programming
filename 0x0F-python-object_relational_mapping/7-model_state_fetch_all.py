@@ -2,9 +2,9 @@
 """ Write a script that lists all State
 objects from the database hbtn_0e_6_usa"""
 
-from model_state import State
+from model_state import Base, State
 import sys
-from sqlalchemy import Session
+from sqlalchemy import Session, create_engine
 from slqalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
