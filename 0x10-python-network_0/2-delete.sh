@@ -1,3 +1,3 @@
 #!/bin/bash
 # cURL Delete Method
-curl -X DELETE -i "$1"
+curl -X DELETE "$1"
