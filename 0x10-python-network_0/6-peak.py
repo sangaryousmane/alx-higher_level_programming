@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
-# Peek in an unsorted ints array
+""" Peek in an unsorted ints array"""
+
+
 def find_peak(list_of_integers):
+    """ Find the peak element in an unsorted array"""
+    if list_of_integers == []:
+        return None
+
+    if len(list_of_integers) == 1:
+        return list_of_integers[0]
+    elif len(list_of_integers) == 2:
+        return max(list_of_integers)
+
     end = len(list_of_integers) - 1
     start = 0
 
@@ -11,5 +22,5 @@ def find_peak(list_of_integers):
                 end = middle
         else:
             start = middle + 1
-    return (start)
+    return list_of_integers[start]
 
