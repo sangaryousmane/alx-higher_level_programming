@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Error code #0"""
-from urllib.request import urlopen, Request
+from urllib.request import urlopen
 import sys
 from urllib.error import HTTPError
 
