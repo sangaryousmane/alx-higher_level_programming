@@ -25,5 +25,4 @@ if __name__ == "__main__":
         password = sys.argv[2]
         get_user_id(username, password)
     else:
-        print("Please provide both username and password (personal access token) as arguments.")
-
+        print("Please provide both username and password")
