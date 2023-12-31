@@ -8,7 +8,7 @@ from requests.auth import HTTPBasicAuth
 
 
 def get_user_id(username, password):
-    url = 'https://api.github.com/user/{}'.format(username)
+    url = 'https://api.github.com/users/{}'.format(username)
     response = requests.get(url, auth=HTTPBasicAuth(username, password))
 
     if response.status_code == 200:
