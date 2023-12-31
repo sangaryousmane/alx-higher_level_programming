@@ -6,6 +6,7 @@ to http://0.0.0.0:5000/search_user with the letter as a parameter.
 import requests
 import sys
 
+
 def search_user(letter):
     if letter:
         payload = {'q': letter}
@@ -23,6 +24,7 @@ def search_user(letter):
     except ValueError:
         print("Not a valid JSON")
 
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         query_letter = sys.argv[1]
@@ -30,4 +32,3 @@ if __name__ == "__main__":
         query_letter = ""
 
     search_user(query_letter)
-
