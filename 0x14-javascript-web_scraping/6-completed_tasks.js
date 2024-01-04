@@ -21,10 +21,7 @@ request.get(todosUrl, (err, response, body) => {
           }
         }
       });
-
-      for (const userId in completedTasksByUser) {
-        console.log(`${userId}: ${completedTasksByUser[userId]}`);
-      }
+	    console.log(completedTasksByUser);
     } catch (parseError) {
       console.error(parseError);
     }
