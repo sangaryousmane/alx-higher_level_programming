@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const movieEndPoint = `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}/`;
+const movieEndPoint = `https://swapi.dev/api/films/${parseInt(process.argv[2], 10)}/`;
 
 request(movieEndPoint, (err, response, body) => {
   if (!err) {
