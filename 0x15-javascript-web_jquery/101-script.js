@@ -1,12 +1,12 @@
-// This script that adds, removes and clears - 
+// This script that adds, removes and clears -
 // li elements from a list when the user clicks
 
-$(document).ready(function(){
-	const myList = $("ul.my_list");
+$(document).ready(function () {
+  const myList = $('ul.my_list');
 
-	$("#add_item").on("click", () => myList.append('<li>Item</li>'));
+  $('#add_item').on('click', () => myList.append('<li>Item</li>'));
 
-	$("#clear_list").on("click", () => myList.empty());
+  $('#clear_list').on('click', () => myList.empty());
 
-	$("#remove_item").on("click", () => $("ul.my_list li:last-child").remove());
+  $('#remove_item').on('click', () => $('ul.my_list li:last-child').remove());
 });
